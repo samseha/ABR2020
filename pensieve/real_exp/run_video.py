@@ -43,7 +43,7 @@ exp_id = sys.argv[3]
 # ---------------------------------------------------
 #          |
 #          v
-url = 'localhost/' + 'myindex_' + abr_algo + '.html'   # localhost worked for me (Allen)
+url = '10.0.7.4/' + 'myindex_' + abr_algo + '.html'   # localhost worked for me (Allen)
 
 # timeout signal
 signal.signal(signal.SIGALRM, timeout_handler)

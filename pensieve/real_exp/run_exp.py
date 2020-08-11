@@ -6,9 +6,9 @@ import time
 
 RUN_SCRIPT = 'run_video.py'
 RANDOM_SEED = 43
-RUN_TIME = 0.4  # sec
-#ABR_ALGO = ['fastMPC', 'robustMPC', 'BOLA', 'RL']
-ABR_ALGO = ['BOLA']
+RUN_TIME = 5  # sec
+ABR_ALGO = ['fastMPC', 'robustMPC', 'RL']
+#ABR_ALGO = ['BOLA']
 REPEAT_TIME = 1
 
 
@@ -26,22 +26,22 @@ def main():
 
 				while True:
                     #print time.time()
-#					print('HERE')
+					#print('HERE')
 					script = 'python ' + RUN_SCRIPT + ' ' + \
 								abr_algo + ' ' + str(RUN_TIME) + ' ' + str(rt)
 					
-#					print('HERE1')
+					#print('HERE1')
 					proc = subprocess.Popen(script,
 								stdout=subprocess.PIPE, 
 								stderr=subprocess.PIPE, 
 								shell=True)
 
 
-#					print('HERE2')	
+					#print('HERE2')	
 					(out, err) = proc.communicate()
                     #print time.time()
 					
-#					print('HERE3')
+					#print('HERE3')
 					if out == 'done\n':
 						break
 					else:
@@ -52,6 +52,6 @@ def main():
 
 
 if __name__ == '__main__':
-        print time.time()
+    #print time.time()
 	main()
-        print time.time()
+    #print time.time()

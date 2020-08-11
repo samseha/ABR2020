@@ -67,7 +67,7 @@ try:
 	display.start()
 	
 	# initialize chrome driver
-	options=Options()
+	options=Options()
 	chrome_driver = '../abr_browser_dir/chromedriver'
 	options.add_argument('--user-data-dir=' + chrome_user_dir)
 	options.add_argument('--ignore-certificate-errors')
